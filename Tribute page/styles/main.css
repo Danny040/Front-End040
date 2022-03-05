@@ -1,0 +1,361 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  /*font-family: 'Oswald', sans-serif;*/
+}
+
+/*top part*/
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", serif;
+}
+
+header {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+header a {
+  display: block;
+}
+
+.icons_ .reorder,
+.icons_ .close {
+  display: none;
+}
+
+nav {
+  top: 0px;
+  background-color: black;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav-links li {
+  margin: 0px 50px;
+}
+
+.nav-links a {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links a:hover:not(active) {
+  cursor: pointer;
+  background: #454955;
+}
+
+.top-content {
+  display: flex;
+  width: 100%;
+}
+
+.headline_ {
+  width: 70%;
+}
+
+.as-button {
+  width: 300px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background: white;
+  border-radius: 5px;
+  margin: 70px 0px 70px 120px;
+  padding: 15px;
+}
+
+.as-button:hover {
+  background: linear-gradient(to right, #fff, #454955);
+}
+
+.headline-who {
+  font-size: 100px;
+  margin: 100px 100px 0px 100px;
+}
+
+.under-headline {
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0px 200px 0px 120px;
+}
+
+.glass-q-m {
+  padding: 0;
+  color: white;
+  border-radius: 30px;
+  width: 30%;
+  margin: 0px 100px 0px 100px;
+  text-align: center;
+}
+
+.glass-q-m h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 500px;
+}
+
+/*middle part (content part)*/
+
+.headline {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 100px 0px 50px 0px;
+}
+
+.profile {
+  display: flex;
+  width: 100%;
+  margin-bottom: 150px;
+}
+
+.short-about-him {
+  width: 70%;
+  display: flex;
+}
+
+.text-about {
+  display: flex;
+  flex-direction: column;
+  margin-left: 200px;
+}
+
+.text-about p {
+  line-height: 2;
+}
+
+.text-about h3,
+.details h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.short-about-him img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  align-self: center;
+  margin: 0px 50px;
+}
+
+.details {
+  width: 30%;
+  margin-right: 200px;
+}
+
+.details span {
+  display: block;
+  margin: 10px 0px;
+  font-weight: bold;
+}
+
+.social-media-ac {
+  display: flex;
+  list-style-type: none;
+}
+
+.twitter-image {
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.forbes-image {
+  width: 50px;
+  height: 30px;
+  margin-top: 25px;
+}
+
+/*More infor part*/
+.about-him {
+  position: relative;
+  margin-top: 50px;
+}
+
+.about-him h2 {
+  margin: 0px 0px 50px 200px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-decoration: 5px underline black;
+}
+
+.about-him p {
+  padding-right: 800px;
+  margin-left: 200px;
+  line-height: 2;
+}
+
+.about-him img {
+  padding: 30px 0;
+  margin-left: 200px;
+  width: 900px;
+  height: 500px;
+}
+
+.fact-about-him {
+  position: absolute;
+  bottom: 200px;
+  left: 750px;
+  right: 300px;
+  width: 30%;
+  height: 500px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.fact-about-him h3 {
+  margin: 50px 0px;
+  text-transform: uppercase;
+}
+
+.fact-about-him p {
+  padding: 0 100px;
+  margin: auto;
+  line-height: 2;
+}
+
+/*companies part*/
+.companies {
+  margin-top: 100px;
+  background-color: black;
+  padding: 10px 100px;
+}
+
+.companies h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 50px;
+  color: white;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  padding: 50px;
+}
+
+.card img {
+  align-self: center;
+  flex: 20%;
+  width: 300px;
+  height: 150px;
+}
+
+.text-about-company h3 {
+  margin-bottom: 30px;
+}
+
+.text-about-company {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 5px;
+  color: black;
+  padding: 50px;
+}
+
+/*gallery part*/
+.gallery {
+  margin: 100px 0px;
+}
+
+.gallery-headline {
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  padding: 30px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 5px;
+}
+
+.row img {
+  width: 100%;
+}
+
+.column {
+  flex: 50%;
+  max-width: 50%;
+}
+
+.column img {
+  padding: 5px;
+}
+
+/*the last part*/
+footer {
+  width: 100%;
+  text-align: center;
+
+  background-color: black;
+  color: white;
+}
+
+footer h2 {
+  padding: 30px 0px 30px 0px;
+}
+
+footer h3 {
+  padding: 30px 0px 30px 0px;
+}
+
+.my-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-links li {
+  display: inline-block;
+  width: 300px;
+  background-color: white;
+  margin: 0px 30px;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+.my-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.telegram {
+  width: 40px;
+  height: 40px;
+}
+
+.github {
+  width: 70px;
+  height: 40px;
+}
