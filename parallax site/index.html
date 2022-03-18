@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <title>Parallax effect site</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h3 class="logo">Future <span>T</span></h3>
+        <span class="material-icons burger" id="burger"> menu </span>
+      </nav>
+      <div class="list-menu-wrapper">
+        <ul class="side-menu-show">
+          <span class="material-icons close" id="close"> close </span>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Store</a>
+          </li>
+          <li>
+            <a href="#">About Us</a>
+          </li>
+          <li>
+            <a href="#">Contacts</a>
+          </li>
+        </ul>
+      </div>
+      <h1 id="headline">
+        Let's build<br />
+        Future<br />
+        Together!
+      </h1>
+    </header>
+    <div class="gallery">
+      <div class="pictures">
+        <img src="./images/picture1.jpg" alt="picture1" />
+        <img src="./images/picture7.jpg" alt="picture7" />
+        <img src="./images/picture3.jpg" alt="picture3" />
+        <img src="./images/picture4.jpg" alt="picture4" />
+        <img src="./images/picture5.jpg" alt="picture5" />
+        <img src="./images/picture6.jpg" alt="picture6" />
+      </div>
+    </div>
+    <div class="content">
+      <h2>Join our team<br />Get endless opportunities</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos
+        cupiditate provident ipsam reiciendis a perspiciatis neque mollitia ex
+        facere enim? A maxime soluta repellat quidem impedit quos ut placeat
+        nihil.
+      </p>
+    </div>
+    <div class="register-part">
+      <a href="#" class="register-btn">Register Now</a>
+      <div class="links">
+        <a href="#"><img src="/images/facebook.png" alt="facebook" /></a>
+        <a href="#"><img src="/images/instagram.png" alt="instagram" /></a>
+        <a href="#"><img src="/images/twitter.png" alt="twitter" /></a>
+        <a href="#" class="youtube"
+          ><img src="/images/youtube.png" alt="youtube"
+        /></a>
+      </div>
+    </div>
+    <footer>
+      <div class="left">
+        <h1>See</h1>
+      </div>
+      <div class="right">
+        <h1>You!</h1>
+      </div>
+    </footer>
+    <script type="text/javascript" src="/main.js"></script>
+    <script>
+      function changeHeadLine() {
+        const headLine__ = document.getElementById("headline");
+        const screen__ = window.innerWidth;
+        if (screen__ <= 500) {
+          headLine__.innerHTML = "Let's<br /> build<br />Future<br />Together!";
+        } else {
+          headLine__.innerHTML = "Let's build<br />Future<br />Together!";
+        }
+      }
+      changeHeadLine();
+    </script>
+  </body>
+</html>

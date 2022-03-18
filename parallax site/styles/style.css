@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  background-image: url(../images/header-bg.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .logo {
+  font-size: 1.5rem;
+  letter-spacing: 0.4em;
+  font-weight: 400;
+  margin-left: 5em;
+}
+
+header nav .logo span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header nav .burger {
+  margin-right: 5em;
+  cursor: pointer;
+}
+
+header nav .burger:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+header h1 {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  -webkit-transform: translate(-20%, -50%);
+          transform: translate(-20%, -50%);
+  font-size: 4.5rem;
+  text-transform: uppercase;
+}
+
+.list-menu-wrapper-show,
+.list-menu-wrapper {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 20%;
+  background-color: white;
+}
+
+.list-menu-wrapper-show .side-menu-show,
+.list-menu-wrapper .side-menu-show {
+  height: 100vh;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-menu-wrapper-show .side-menu-show .close,
+.list-menu-wrapper .side-menu-show .close {
+  cursor: pointer;
+  position: absolute;
+  color: #012674;
+  top: 1em;
+  right: 1em;
+}
+
+.list-menu-wrapper-show .side-menu-show .close:hover,
+.list-menu-wrapper .side-menu-show .close:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.list-menu-wrapper-show .side-menu-show a,
+.list-menu-wrapper .side-menu-show a {
+  text-decoration: none;
+  color: #012674;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.list-menu-wrapper-show .side-menu-show a:hover,
+.list-menu-wrapper .side-menu-show a:hover {
+  border-bottom: 0.1em solid #012674;
+}
+
+.list-menu-wrapper {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 1s ease-in;
+  transition: -webkit-transform 1s ease-in;
+  transition: transform 1s ease-in;
+  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+}
+
+.list-menu-wrapper-show {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: -webkit-transform 1s ease-in;
+  transition: -webkit-transform 1s ease-in;
+  transition: transform 1s ease-in;
+  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #012674;
+  background-attachment: fixed;
+  color: white;
+}
+
+.gallery .pictures {
+  width: 80%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  gap: 1em;
+}
+
+.gallery .pictures img {
+  width: 100%;
+}
+
+.content {
+  background-image: url(../images/middle-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 3.2rem;
+  text-transform: uppercase;
+}
+
+.content p {
+  color: white;
+  font-size: 1.5rem;
+  padding: 0em 10em;
+  margin-top: 4em;
+}
+
+.register-part {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.register-part .register-btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: white;
+  color: black;
+  font-size: 3rem;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+}
+
+.register-part .register-btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.register-part .links {
+  width: 100%;
+  margin: 7em auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.register-part .links a {
+  margin-right: 2em;
+}
+
+.register-part .links .youtube {
+  margin-right: 0;
+}
+
+.register-part .links img {
+  width: 3em;
+  height: 3em;
+}
+
+footer {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/header-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .left,
+footer .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 0.5em;
+}
+
+/*laptops and desctops*/
+@media only screen and (max-width: 1134px) {
+  header h1 {
+    font-size: 4rem;
+  }
+  .list-menu-wrapper,
+  .list-menu-wrapper-show {
+    width: 30%;
+  }
+  .content h2 {
+    font-size: 3rem;
+  }
+  .content p {
+    padding: 0em 5em;
+  }
+  .register-part .register-btn {
+    font-size: 2.5rem;
+  }
+  .register-part .register-btn:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  footer .left,
+  footer .right {
+    font-size: 2.5rem;
+  }
+}
+
+/*landscape tablets*/
+@media only screen and (max-width: 992px) {
+  header nav .logo {
+    margin-left: 4em;
+  }
+  header nav .burger {
+    margin-right: 4em;
+  }
+  .register-part .register-btn {
+    font-size: 2.2rem;
+  }
+}
+
+/*portrait tablets and large phones*/
+@media only screen and (max-width: 768px) {
+  header h1 {
+    font-size: 3.5rem;
+  }
+  header nav .logo {
+    margin-left: 3em;
+  }
+  header nav .burger {
+    margin-right: 3em;
+  }
+  .list-menu-wrapper,
+  .list-menu-wrapper-show {
+    width: 35%;
+  }
+  .content h2 {
+    font-size: 2.5rem;
+  }
+  .content p {
+    font-size: 1.2rem;
+    padding: 0em 4em;
+  }
+}
+
+/*phones*/
+@media only screen and (max-width: 600px) {
+  header h1 {
+    font-size: 3rem;
+  }
+  .list-menu-wrapper,
+  .list-menu-wrapper-show {
+    width: 40%;
+  }
+  .gallery .pictures {
+    width: 80%;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    gap: 1em;
+  }
+  .content h2 {
+    font-size: 2rem;
+  }
+  .content p {
+    font-size: 1.1rem;
+    padding: 0 3em;
+  }
+  .register-part .register-btn {
+    font-size: 2rem;
+  }
+  footer h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  header nav .logo {
+    margin-left: 2em;
+  }
+  header nav .burger {
+    margin-right: 2em;
+  }
+  header nav h1 {
+    word-spacing: parent-width;
+    font-size: 2.5rem;
+  }
+  .content h2 {
+    font-size: 1.8rem;
+  }
+  .content p {
+    font-size: 1.1rem;
+    padding: 0 4em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
