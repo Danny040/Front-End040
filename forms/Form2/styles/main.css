@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+}
+
+::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+}
+
+main {
+  background-color: white;
+}
+
+.text-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 80%;
+}
+
+.text-info {
+  display: flex;
+  flex-direction: column;
+  padding: 5em 4em;
+  margin-top: 2em;
+}
+
+.text-info p {
+  color: #999999;
+}
+
+.text-info h1 {
+  font-size: 2.5em;
+  margin-top: 0.25em;
+}
+
+.text-info a {
+  text-decoration: none;
+  color: #5c54db;
+}
+
+.before-headline {
+  text-transform: uppercase;
+  font-size: 1.45rem;
+}
+
+.another-info {
+  margin-top: 1.5em;
+  font-size: 1.25em;
+  line-height: 1.75em;
+}
+
+.links-info {
+  padding: 0em 4em;
+  margin-bottom: 5em;
+}
+
+.links-info p {
+  font-size: 1.1rem;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1.5em 0em;
+}
+
+.links img {
+  height: 30px;
+  width: 30px;
+  margin-right: 1.5em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 0em 1em;
+  width: 80%;
+  margin: auto;
+}
+
+form p {
+  font-size: 1.3rem;
+  color: #686868;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+form input,
+form textarea,
+form select {
+  padding: 0.7em;
+  margin-bottom: 1em;
+  outline: none;
+  border: none;
+  border-bottom: 0.11em solid black;
+  font-size: 1.1rem;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-bottom: 0.11em solid #5c54db;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+.as-button {
+  display: inline-block;
+  width: 35%;
+  text-align: center;
+  border: 0.1em solid black;
+  background-color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.as-button:hover {
+  background-color: black;
+  color: white;
+}
+
+/*break points 768, 1158*/
+@media only screen and (min-width: 768px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 5em auto;
+  }
+
+  .before-headline {
+    font-size: 1.25rem;
+  }
+
+  .text-info h1 {
+    font-size: 2rem;
+  }
+
+  .text-info {
+    padding: 0 3.5em 0 1em;
+    margin: 3em 0 5em 0;
+  }
+
+  .another-info {
+    line-height: 1.5em;
+    font-size: 1.25rem;
+  }
+
+  .links-info h1 {
+    font-size: 2.2rem;
+  }
+
+  .links-info {
+    padding: 0 3.5em 0 1em;
+  }
+
+  .links-info p {
+    font-size: 1.25rem;
+  }
+
+  form {
+    display: flex;
+    margin-top: 3em;
+  }
+
+  form p {
+    font-size: 1.2rem;
+  }
+
+  form input,
+  form textarea,
+  form select {
+    font-size: 1.3rem;
+  }
+
+  .as-button {
+    width: 40%;
+    margin-top: 1em;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  form input,
+  form textarea,
+  form select {
+    margin-bottom: 0.7em;
+    font-size: 1.25rem;
+  }
+  .as-button {
+    width: 40%;
+    margin-top: 0.7em;
+    font-size: 1.2rem;
+  }
+}

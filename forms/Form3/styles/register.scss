@@ -1,0 +1,132 @@
+$secontColor: #cb6794;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/space-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  font-family: "Monsterrat", sans-serif;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: hsla(0, 0%, 0%, 0.35);
+  backdrop-filter: blur(0.15em);
+  color: white;
+  padding: 2em 3em;
+  padding-top: 4em;
+  position: relative;
+
+  span {
+    color: white;
+    position: absolute;
+    left: 2em;
+    top: 1em;
+
+    &:hover {
+      transform: scale(1.3);
+      transition: transform 0.2s ease-in;
+    }
+  }
+
+  div {
+    margin-bottom: 2em;
+
+    label {
+      margin-right: 2em;
+      font-weight: bold;
+    }
+
+    input,
+    select {
+      font-size: 1.1rem;
+      padding: 0.5em;
+      margin-right: 1em;
+      border: none;
+      outline: none;
+      //margin-left: 1.5em;
+      &:focus {
+        border: 0.1em solid $secontColor;
+      }
+    }
+  }
+
+  .question {
+    p {
+      font-weight: bold;
+    }
+
+    input {
+      margin: 0;
+      margin-top: 1em;
+    }
+  }
+
+  .Sign-Up {
+    width: 30%;
+    letter-spacing: 0.15em;
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    padding: 1em;
+    background-color: $secontColor;
+    border: none;
+    border-radius: 0.5em;
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s ease-in;
+    }
+  }
+}
+
+/*landscape tablets*/
+@media only screen and (max-width: 768px) {
+  form {
+    font-size: 1.1rem;
+    div {
+      input,
+      select {
+        font-size: 1rem;
+      }
+    }
+    .Sign-Up {
+      padding: 0.8em;
+    }
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  form {
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.5em;
+    }
+    .fname-sname,
+    .phone {
+      input {
+        margin-bottom: 0.5em;
+      }
+    }
+    .question {
+      display: block;
+    }
+    .Sign-Up {
+      width: 45%;
+      letter-spacing: 0.15em;
+      font-size: 0.8rem;
+    }
+  }
+}

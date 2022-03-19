@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.flower {
+  width: 15em;
+  height: 25em;
+}
+
+.healine-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.healine-text h1 {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2em;
+  padding: 0em 3em;
+}
+
+.healine-text p {
+  text-align: center;
+  padding: 0em 5em;
+  margin-bottom: 2em;
+}
+
+.form_ {
+  width: 65%;
+  margin: auto;
+  margin-bottom: 4em;
+  background-color: black;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+}
+::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+input {
+  padding: 1em;
+  outline: none;
+  border: none;
+}
+
+label {
+  padding-top: 2em;
+}
+
+textarea {
+  resize: vertical;
+  outline: none;
+  border: none;
+  padding: 1em;
+}
+
+.Terms {
+  display: flex;
+  padding: 2em 0em;
+}
+
+.Terms label {
+  padding: 0em;
+  font-size: 0.95em;
+}
+
+.Terms a {
+  color: white;
+}
+
+.Terms a:hover {
+  color: rgb(250, 250, 167);
+}
+
+.as-button {
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+.as-button:hover {
+  background: rgb(250, 250, 167);
+  color: black;
+}
+
+/*break points are 575(removed because nothing needed to be changed), 766, 990*/
+@media only screen and (min-width: 766px) {
+  .flower {
+    width: 20em;
+    height: 30em;
+  }
+
+  .healine-text h1 {
+    font-size: 2.5em;
+    padding: 0em 2.5em;
+  }
+
+  .healine-text p {
+    padding: 0em 4em;
+    font-size: 1.25em;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: "flowers headline-text" "flowers forms";
+  }
+
+  .picture {
+    grid-area: flowers;
+    background-color: black;
+  }
+
+  .flower {
+    align-self: center;
+  }
+
+  .healine-text {
+    grid-area: headline-text;
+  }
+
+  .form_ {
+    grid-area: forms;
+    width: 90%;
+  }
+}

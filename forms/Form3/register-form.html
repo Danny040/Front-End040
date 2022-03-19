@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./styles/register.css" />
+    <title>Register Form</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="#">
+        <a href="/index.html"
+          ><span class="material-icons"> arrow_back </span></a
+        >
+        <div class="fname-sname">
+          <label for="Name">Name</label>
+          <input
+            type="text"
+            name="Name"
+            class="fname"
+            placeholder="Enter your name"
+          />
+          <input
+            type="text"
+            name="Name"
+            class="sname"
+            placeholder="Enter you surname"
+          />
+        </div>
+        <div class="company">
+          <label for="Company">Company</label>
+          <select name="Company" class="companies">
+            <option value="Space-X">Space X</option>
+            <option value="Blue-origin">Blue Origin</option>
+            <option value="Virgin-Galactic">Virgin Galactic</option>
+            <option value="Nasa">NASA</option>
+          </select>
+        </div>
+        <div class="email-address">
+          <label for="Email">Email</label>
+          <input
+            type="email"
+            name="Email"
+            placeholder="Enter you email address"
+          />
+        </div>
+        <div class="phone">
+          <label for="Phone">Phone</label>
+          <input type="text" name="Phone" placeholder="Area code" size="5" />
+          <input type="text" name="Phone" placeholder="Phone number" />
+        </div>
+        <div class="question">
+          <p>Are you an existing customer?</p>
+          <input type="radio" name="answer" id="yes" value="Yes" />
+          <label for="Yes">Yes</label>
+          <input type="radio" name="answer" id="no" value="No" />
+          <label for="No">No</label>
+        </div>
+        <button class="Sign-Up">Sign Up</button>
+      </form>
+    </div>
+  </body>
+</html>
