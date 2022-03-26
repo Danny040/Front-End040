@@ -1,0 +1,547 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color1: #7a0026;
+  --color2: #1b1f27;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/*header*/
+header {
+  width: 100%;
+  background-image: url(../images/forest.webp);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-form {
+  background-color: var(--color1);
+  width: 70%;
+  margin: auto;
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.registration-form h1 {
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 0.8em;
+}
+
+.registration-form h1 span {
+  font-weight: 500;
+}
+
+.registration-form p {
+  font-size: 0.9rem;
+  margin-bottom: 2.5em;
+}
+
+form {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+form input {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  padding: 0.5em;
+  margin-bottom: 1.2em;
+  outline: none;
+}
+
+.buy {
+  cursor: pointer;
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1em;
+  background-color: #002157;
+  color: white;
+  border: none;
+  border-radius: 0.2em;
+}
+
+.buy:hover {
+  background-color: #0e3470;
+}
+
+.book-picture {
+  width: 70%;
+  margin: auto;
+  background-color: #1b1f27;
+  box-shadow: 0 0 5px white;
+  margin-top: 5em;
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.cover {
+  width: 90%;
+  margin: 1em auto;
+  position: relative;
+}
+
+.cover img {
+  width: 100%;
+  height: 480px;
+  border-radius: 16px;
+}
+
+.cover h3 {
+  background-color: var(--color2);
+  padding: 0.3em;
+  font-weight: 300;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+.book-name {
+  position: absolute;
+  bottom: 5%;
+  left: 30%;
+  border-left: 0.3em solid var(--color1);
+  padding: 0.4em;
+}
+
+.book-name h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.book-name h2 span {
+  font-weight: 500;
+}
+
+.book-name p {
+  font-size: 0.8rem;
+}
+
+.short-desc {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.short-desc h2 {
+  font-size: 2rem;
+  margin-bottom: 1em;
+  text-shadow: 0 0 10px #1b1f27;
+}
+
+.short-desc p {
+  font-size: 0.9rem;
+}
+
+.points {
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.points h3 {
+  font-weight: 500;
+  text-shadow: 0 0 10px #1b1f27;
+  margin: 1.5em 0 0.5em 0;
+}
+
+.points p {
+  font-weight: 300;
+}
+
+.circle {
+  background-color: var(--color1);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  width: 3em;
+  height: 3em;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+/*main*/
+.author {
+  background-color: var(--color1);
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+}
+
+.author h1 {
+  padding: 1.5em 0;
+}
+
+.author h3 {
+  padding: 0 4em 1em;
+  font-weight: 500;
+}
+
+.author p {
+  padding: 0 2em;
+  font-size: 0.9rem;
+}
+
+.authors-photo {
+  width: 80%;
+  margin: auto;
+  padding: 3em 0;
+}
+
+.authors-photo img {
+  width: 100%;
+}
+/* points and commets*/
+.wrapper {
+  background-image: url(../images/forest.webp);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.buy-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-btn {
+  cursor: pointer;
+  width: 70%;
+  margin: auto;
+  margin-top: 2em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1em;
+  background-color: #002157;
+  color: white;
+  border: none;
+  border-radius: 0.2em;
+}
+
+.buy-btn:hover {
+  background-color: #0e3470;
+}
+
+.strong-sides {
+  color: white;
+  margin: 2em 0;
+}
+
+.top-quote {
+  border-top: 0.3em solid var(--color1);
+  font-size: 0.8rem;
+  font-style: italic;
+  width: 200px;
+  margin: 0 0 2em 4em;
+}
+
+.top-quote span,
+.bottom-quote span {
+  font-weight: 500;
+}
+
+.bottom-quote {
+  border-top: 0.3em solid var(--color1);
+  font-size: 0.8rem;
+  font-style: italic;
+  width: 200px;
+  margin: 4em 3em 0 auto;
+}
+
+.strong-sides h2 {
+  text-align: center;
+  text-shadow: 0 0 10px #1b1f27;
+  margin-bottom: 1em;
+}
+
+.strong-points {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.strong-points p {
+  margin-bottom: 0.5em;
+}
+
+.some-logo {
+  background-color: rgba(var(--color2), 0.8);
+  backdrop-filter: blur(0.5em);
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.some-logo img {
+  width: 7em;
+  height: 8em;
+}
+
+.comments-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comments-wrapper h2 {
+  text-align: center;
+  color: white;
+  margin: 3em 0;
+}
+
+.comment {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(var(--color2), 0.8);
+  backdrop-filter: blur(0.6em);
+  border-radius: 0.5em;
+  margin-bottom: 4em;
+  padding: 2em 0;
+}
+
+.comment p {
+  text-align: center;
+  padding: 0.5em 3em;
+}
+
+.glassy-bg {
+  width: 3em;
+  height: 3em;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.2em;
+}
+
+.quotes {
+  width: 2em;
+  height: 2em;
+}
+
+@media only screen and (min-width: 600px) {
+  .book-picture {
+    width: 55%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .book-picture {
+    width: 50%;
+  }
+  .strong-points {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    align-content: center;
+    column-gap: 1em;
+  }
+
+  .some-logo {
+    grid-area: 1 / 2 / 3 / 3;
+  }
+  .buy-btn {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 830px) {
+  .registration-form {
+    width: 60%;
+  }
+  .book-picture {
+    width: 40%;
+  }
+  .strong-sides h2 {
+    font-size: 2rem;
+  }
+  .strong-points p {
+    font-size: 1.2rem;
+  }
+  .top-quote,
+  .bottom-quote {
+    font-size: 0.9rem;
+  }
+  .comments-wrapper h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .registration-form {
+    width: 55%;
+  }
+  .book-picture {
+    width: 35%;
+  }
+
+  .points {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .one {
+    grid-area: 1 / 2 / 2 / 4;
+  }
+
+  .two {
+    grid-area: 2 / 1 / 3 / 3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    align-content: center;
+  }
+  .three {
+    grid-area: 3 / 2 / 4 / 4;
+  }
+  .one,
+  .three {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .two .circle {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .top-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .registration-form {
+    width: 500px;
+  }
+
+  .book-picture {
+    width: 350px;
+  }
+
+  .author {
+    background-color: var(--color1);
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+  }
+
+  .author h1 {
+    padding: 1.5em 0;
+  }
+
+  .author h3 {
+    font-size: 1.5rem;
+    padding: 0 7em 1em;
+  }
+
+  .author p {
+    padding: 0 8em;
+    font-size: 1rem;
+  }
+
+  .authors-photo {
+    width: 500px;
+  }
+
+  .buy-btn {
+    width: 350px;
+  }
+
+  .strong-sides h2 {
+    font-size: 2.5rem;
+  }
+  .strong-points p {
+    font-size: 1.5rem;
+  }
+
+  .top-quote {
+    margin-left: 6em;
+  }
+
+  .bottom-quote {
+    margin-right: 6em;
+  }
+
+  .comments-wrapper h2 {
+    margin-bottom: 1em;
+  }
+  .comments {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .comment {
+    width: 300px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .strong-points {
+    column-gap: 2em;
+  }
+
+  .top-quote {
+    margin-left: 10em;
+  }
+
+  .bottom-quote {
+    margin-right: 10em;
+  }
+
+  .comment {
+    width: 450px;
+    margin-bottom: 0;
+  }
+}
