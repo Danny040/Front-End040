@@ -1,0 +1,133 @@
+:root {
+  --textBackground: ;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/Oktoberfest.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.8)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.time {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  background: #7f7fd5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #91eae4,
+    #86a8e7,
+    #7f7fd5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #91eae4,
+    #86a8e7,
+    #7f7fd5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.days h2,
+.hours h2,
+.minutes h2,
+.seconds h2 {
+  font-size: 4.5rem;
+}
+
+.days p,
+.hours p,
+.minutes p,
+.seconds p {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.holiday {
+  font-size: 1.5rem;
+  background: #7f7fd5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #91eae4,
+    #86a8e7,
+    #7f7fd5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #91eae4,
+    #86a8e7,
+    #7f7fd5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  margin: 2.5em 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    width: 200px;
+  }
+
+  .days h2,
+  .hours h2,
+  .minutes h2,
+  .seconds h2 {
+    font-size: 3.5rem;
+  }
+
+  .days p,
+  .hours p,
+  .minutes p,
+  .seconds p {
+    font-size: 1rem;
+  }
+}
