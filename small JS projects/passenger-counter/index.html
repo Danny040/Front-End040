@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Passenger Counter</title>
+  </head>
+  <body>
+    <div class="counter-window" id="counter-window">
+      <div class="wrapper">
+        <h1>People entered:</h1>
+        <h3 class="number-of-people" id="number-of-people">0</h3>
+        <button class="first-btn" id="adding-btn" onclick="myAddFunction()">
+          ADD
+        </button>
+        <button class="second-btn" id="save-btn" onclick="mySaveFunction()">
+          Save
+        </button>
+        <button
+          class="third-btn"
+          id="history-btn"
+          onclick="myHistoryFunction()"
+        >
+          History
+        </button>
+      </div>
+    </div>
+    <div class="history-display history-display-off" id="history-display">
+      <span class="material-icons close-icon" onclick="closeFunction()">
+        close
+      </span>
+      <div class="text">
+        <h1>Total number of people:</h1>
+        <h3 class="number-of-people" id="total-number-of-people">0</h3>
+      </div>
+      <table id="table1">
+        <tr>
+          <th>Time</th>
+          <th>Number of people</th>
+        </tr>
+      </table>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>

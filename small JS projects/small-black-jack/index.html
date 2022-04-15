@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Small Black Jack</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="table">
+        <h1>BlackJack</h1>
+        <div class="game-field game-field-off" id="game-field">
+          <h3 class="lose-win" id="game-result"></h3>
+          <p id="dealer">Dealers cards:</p>
+          <p id="player">Players cards:</p>
+        </div>
+        <div class="bets-on bets-off" id="bets-btns">
+          <button class="bet-btn five" id="five" onclick="betMoney(5)">
+            5 &dollar;
+          </button>
+          <button class="bet-btn ten" id="ten" onclick="betMoney(10)">
+            10 &dollar;
+          </button>
+          <button
+            class="bet-btn twenty-five"
+            id="twenty-five"
+            onclick="betMoney(25)"
+          >
+            25 &dollar;
+          </button>
+          <button class="bet-btn fifty" id="fifty" onclick="betMoney(50)">
+            50 &dollar;
+          </button>
+        </div>
+        <div class="start-section" id="start-section">
+          <button class="start-game" id="start-game" onclick="startFunction()">
+            Start
+          </button>
+        </div>
+        <div class="options options-off" id="options-btns">
+          <button class="add-card" id="add-card" onclick="addOneMoreCard()">
+            Add Card
+          </button>
+          <button
+            class="show-cards show-cards-off"
+            id="show-card"
+            onclick="showResult()"
+          >
+            Result
+          </button>
+          <button class="new-cards" id="new-cards" onclick="startNewGame()">
+            New Game
+          </button>
+          <button class="end-game" id="end-game" onclick="endFunction()">
+            End Game
+          </button>
+        </div>
+        <h2 class="bank-off" id="bank"></h2>
+      </div>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>

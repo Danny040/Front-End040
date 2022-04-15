@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/app.js" defer></script>
+    <title>Timer</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <h1>Timer</h1>
+        <div class="clock">
+          <div class="hours">
+            <span class="material-icons arrow-up" id="arrow-up">
+              expand_less
+            </span>
+            <h2 class="time" id="hours">0</h2>
+            <span class="material-icons arrow-down" id="arrow-down">
+              expand_more
+            </span>
+          </div>
+          <div class="minutes">
+            <span class="material-icons arrow-up" id="arrow-up">
+              expand_less
+            </span>
+            <h2 class="time" id="minutes">0</h2>
+            <span class="material-icons arrow-down" id="arrow-down">
+              expand_more
+            </span>
+          </div>
+          <div class="seconds">
+            <span class="material-icons arrow-up" id="arrow-up">
+              expand_less
+            </span>
+            <h2 class="time" id="seconds">0</h2>
+            <span class="material-icons arrow-down" id="arrow-down">
+              expand_more
+            </span>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="btn" id="start">Start</button>
+          <button class="btn" id="stop">Stop</button>
+          <button class="btn" id="cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

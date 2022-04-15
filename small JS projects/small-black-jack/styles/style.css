@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.table {
+  width: 450px;
+  height: 80vh;
+  background-image: url("../images/card-table.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-radius: 7px;
+  box-shadow: 0 0 5px 1px rgba(215, 177, 5, 0.9),
+    0 0 9px 3px rgba(215, 177, 5, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.table h1 {
+  color: rgb(235, 194, 10);
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  padding: 1em;
+}
+
+.game-field {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.game-field-off {
+  display: none;
+}
+
+.game-field p {
+  font-size: 1.2rem;
+  padding-bottom: 0.8em;
+}
+
+.lose-win {
+  text-align: center;
+  font-size: 1.7rem;
+  padding-bottom: 0.75em;
+}
+
+.bets-on {
+  width: 70%;
+  margin: 1em auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1em;
+  justify-content: center;
+}
+
+.bets-off {
+  display: none;
+}
+
+.bet-btn {
+  border: 2px dashed white;
+  cursor: pointer;
+  width: 80px;
+  font-size: 1rem;
+  padding: 0.8em;
+  border-radius: 5px;
+  color: white;
+}
+
+.bet-btn:hover {
+  transform: scale(1.1);
+}
+
+.five {
+  background-color: red;
+}
+
+.ten {
+  background-color: blue;
+}
+
+.twenty-five {
+  background-color: green;
+}
+
+.fifty {
+  background-color: black;
+}
+
+.start-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+}
+
+.start-section-off {
+  display: none;
+}
+
+.start-game {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1em;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  background-color: rgb(235, 194, 10);
+  animation: blinking 2s ease-in-out infinite;
+}
+
+.start-game:hover {
+  animation: none;
+}
+
+@keyframes blinking {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto 1em auto;
+}
+
+.options-off {
+  display: none;
+}
+
+.options button {
+  cursor: pointer;
+  width: 150px;
+  padding: 0.8em;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+  background-color: rgb(235, 194, 10);
+  color: white;
+}
+
+.options button:hover {
+  transform: scale(1.1);
+}
+
+.show-cards-off {
+  display: none;
+}
+
+.bank-off {
+  display: none;
+}
