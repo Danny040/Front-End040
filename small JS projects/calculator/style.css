@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  background: #ffb178;
+  background: linear-gradient(to right, #ffb178, #f39146);
+  background: -webkit-linear-gradient(to right, #ffb178, #f39146);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 350px;
+  height: 85vh;
+  background: #243441;
+  border-radius: 25px;
+  box-shadow: 0 0 8px 2px #f77c1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screen {
+  width: 100%;
+  height: 200px;
+  padding: 1.5em;
+  color: #fcfffe;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.previous-number {
+  font-size: 1.5rem;
+  color: #76858e;
+  margin-bottom: 0.5em;
+}
+
+.current-number {
+  color: #fcfffe;
+  font-size: 2.5rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.buttons {
+  padding: 0.3em;
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 20px 20px;
+  justify-items: center;
+}
+
+button {
+  width: 100%;
+  min-width: 60px;
+  min-height: 60px;
+  cursor: pointer;
+  border: none;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  box-shadow: 0 -1px 5px rgba(118, 118, 118, 0.5), 0 2px 5px rgb(9, 9, 9, 0.5);
+  color: #6d7b86;
+  font-size: 1.2rem;
+  font-family: "Ubuntu", sans-serif;
+  background: #243441;
+}
+
+button:active {
+  box-shadow: 0 -2px 5px rgba(118, 118, 118, 0.6), 0 3px 5px rgb(9, 9, 9, 0.6);
+  transform: scale(0.95);
+}
+
+.operation {
+  color: #ea8d40;
+}
+
+.clear-all {
+  grid-column: 1 / 3;
+}
+
+.equal-sign {
+  color: #fcfffe;
+  background-color: #ec802e;
+  grid-area: 5 / 3 / 6 / 5;
+}
