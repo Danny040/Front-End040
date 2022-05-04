@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background: #a8ff78; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #78ffd6,
+    #a8ff78
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #78ffd6,
+    #a8ff78
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  background: -webkit-linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
+.form-wrapper {
+  z-index: 100;
+  width: 60%;
+  height: 80vh;
+  border-radius: 25px;
+  margin: auto;
+  padding: 40px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.3)
+  );
+  background: -webkit-linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.3)
+  );
+  box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.4);
+}
+
+form {
+  font-size: 1.2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user-name,
+.email,
+.password {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.user-name input,
+.email input,
+.password input {
+  color: rgb(20, 60, 97);
+  background: none;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.label-name,
+.label-email,
+.label-password {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+  border-bottom: 1px solid rgb(20, 60, 97);
+}
+
+.label-name::after,
+.label-email::after,
+.label-password::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 2px;
+  position: absolute;
+  border-bottom: 3px solid rgb(140, 39, 255);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.label-content,
+.label-content2,
+.label-content3 {
+  position: absolute;
+  top: 20px;
+  transition: all 0.5s ease;
+}
+
+.user-name input:focus + .label-name .label-content,
+.user-name input:valid + .label-name .label-content,
+.email input:focus + .label-email .label-content2,
+.email input:valid + .label-email .label-content2,
+.password input:focus + .label-password .label-content3,
+.password input:valid + .label-password .label-content3 {
+  color: rgb(183, 120, 255);
+  font-size: 1rem;
+  transform: translateY(-95%);
+}
+
+.user-name input:focus + .label-name::after,
+.user-name input:valid + .label-name::after,
+.email input:focus + .label-email::after,
+.email input:valid + .label-email::after,
+.password input:focus + .label-password::after,
+.password input:valid + .label-password::after {
+  transform: translateX(0%);
+}
+
+.submit-btn input {
+  cursor: pointer;
+  width: 150px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: none;
+  background: rgb(140, 39, 255);
+  color: white;
+  border-radius: 7px;
+  padding: 0.5em;
+}
+
+.submit-btn input:hover {
+  background-color: rgb(156, 69, 255);
+}
