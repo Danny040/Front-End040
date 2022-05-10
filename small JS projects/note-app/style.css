@@ -1,0 +1,326 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  font-family: "Monsterrat", sans-serif;
+  background: #000633;
+  color: white;
+}
+
+.wrapper-two {
+  width: 95%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header > h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+main {
+  width: 100%;
+  height: 90vh;
+  padding: 3em 5em;
+}
+
+.notes {
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.notes::-webkit-scrollbar {
+  width: 10px;
+}
+
+.notes::-webkit-scrollbar-track {
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.notes::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.note {
+  width: 300px;
+  height: 300px;
+  margin: 0 10px 10px 0;
+  background: white;
+  color: #000633;
+  padding: 1em;
+  border-radius: 5%;
+  position: relative;
+}
+
+.edit-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  color: #000633;
+  background: white;
+  border-radius: 5%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  animation: showup 0.5s ease-in-out forwards;
+}
+
+@keyframes showup {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.edit-head {
+  width: 100%;
+  display: flex;
+}
+
+.edit-head > h2 {
+  margin-left: 20px;
+}
+
+.edit-note-headline {
+  width: 100%;
+  display: flex;
+}
+
+.edit-note-headline input {
+  font-size: 1em;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #000633;
+  color: #222d52;
+  margin: 0px 0px 0px 5px;
+}
+
+.textarea-two {
+  font-size: 1em;
+  color: #222d52;
+  font-family: "Monsterrat", sans-serif;
+  border: none;
+  outline: none;
+  resize: vertical;
+  margin: 10px 0px;
+}
+
+.edit-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-btn {
+  cursor: pointer;
+  border: none;
+  background-color: #0065ff;
+  color: white;
+  width: 100px;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.edit-btn:hover {
+  background-color: #257cff;
+}
+
+.note:hover > .options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note h2 {
+  margin-bottom: 10px;
+}
+
+.options {
+  width: 100%;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.edit,
+.remove {
+  cursor: pointer;
+  color: #000633;
+}
+
+.create-note {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background: rgba(0, 5, 50, 0.65);
+}
+
+.writing-area {
+  width: 60%;
+  margin: 0 auto;
+  height: 60vh;
+  color: #000633;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px 20px 0 0;
+  padding: 3em 2em;
+  transform: translateY(200%);
+}
+
+.text {
+  display: flex;
+  width: 100%;
+}
+
+.text h2 {
+  color: #000633;
+  margin-left: 30px;
+}
+
+.arrow-icon {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.arrow-icon:hover {
+  transform: translateX(-30%);
+}
+
+.note-headline {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+}
+
+.note-headline label {
+  font-size: 1.1rem;
+  margin-right: 20px;
+}
+
+.note-headline input {
+  outline: none;
+  border: none;
+  border-bottom: 3px solid #000633;
+  font-size: 1rem;
+  color: #222d52;
+}
+
+.textarea-one {
+  color: #222d52;
+  font-family: "Monsterrat", sans-serif;
+  font-size: 1rem;
+  margin-top: 30px;
+  border: none;
+  outline: none;
+  resize: vertical;
+}
+
+.save-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.save-btn {
+  cursor: pointer;
+  border: none;
+  background-color: #0065ff;
+  color: white;
+  font-size: 1.4rem;
+  width: 100px;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.save-btn:hover {
+  background-color: #257cff;
+}
+
+.add-btn {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  font-family: "Monsterrat", sans-serif;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  background-color: #0065ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus-icon {
+  font-weight: bold;
+  transform: scale(1.5);
+}
+
+.add-btn:hover {
+  background-color: #257cff;
+}
+
+@media only screen and (max-width: 768px) {
+  header > h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .search-area {
+    width: 200px;
+  }
+
+  .search-label {
+    right: 15px;
+    padding: 0.26em;
+  }
+
+  .search-input {
+    font-size: 0.7rem;
+  }
+
+  .writing-area {
+    width: 100%;
+  }
+}
