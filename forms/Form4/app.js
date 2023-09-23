@@ -1,10 +1,10 @@
-class Bubbles {
+class Bubbles { // this code helps to randomize position of the bubbles
   constructor() {
-    this.width = this.getRendomParameter(20, 200);
+    this.width = this.getRendomParameter(20, 200); // width and height are the same thing. they are in range between 20 and 200
     this.height = this.width;
     this.top = this.getRendomParameter(0, window.innerHeight);
     this.left = this.getRendomParameter(0, window.innerWidth);
-    this.parent = document.querySelector(".wrapper");
+    this.parent = document.querySelector(".wrapper"); // selects the class wrapper
   }
 
   getRendomParameter(min, max) {
