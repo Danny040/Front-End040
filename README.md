@@ -1,2 +1,2 @@
 # Front-end
-Beginner front end projects. Number of projects is 10.
+Beginner front-end projects.
