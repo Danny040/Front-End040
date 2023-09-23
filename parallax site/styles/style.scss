@@ -20,7 +20,7 @@ header {
   background-attachment: fixed;
   color: white;
 
-  nav {
+  nav { // navigation bar
     display: flex;
     width: 100%;
     height: 10vh;
@@ -37,7 +37,7 @@ header {
       }
     }
 
-    .burger {
+    .burger { // burger menu icon
       margin-right: 5em;
       cursor: pointer;
       &:hover {
@@ -56,7 +56,7 @@ header {
   }
 }
 
-.list-menu-wrapper-show,
+.list-menu-wrapper-show, 
 .list-menu-wrapper {
   display: block;
   position: absolute;
@@ -98,7 +98,7 @@ header {
     }
   }
 }
-
+// styles bellow are used to add animation for side navigation menu
 .list-menu-wrapper {
   transform: translateX(100%);
   transition: transform 1s ease-in;
@@ -108,7 +108,7 @@ header {
   transform: translateX(0%);
   transition: transform 1s ease-in;
 }
-
+// gallery styles use flex-grid approach
 .gallery {
   display: flex;
   align-items: center;
@@ -336,7 +336,7 @@ footer {
     }
   }
 }
-
+// smaller devicess
 @media only screen and (max-width: 500px) {
   header {
     nav {
