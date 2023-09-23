@@ -1,9 +1,10 @@
+/*removing unnecessary styles before adding mine*/
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
+/*variables that are used later*/
 :root {
   --color1: #7a0026;
   --color2: #1b1f27;
@@ -66,7 +67,7 @@ form input {
   margin-bottom: 1.2em;
   outline: none;
 }
-
+/* buy - buy button*/
 .buy {
   cursor: pointer;
   width: 80%;
@@ -81,7 +82,7 @@ form input {
   border: none;
   border-radius: 0.2em;
 }
-
+/* using pseudo class */
 .buy:hover {
   background-color: #0e3470;
 }
@@ -96,7 +97,7 @@ form input {
   display: flex;
   align-items: center;
 }
-
+/* book's cover section*/
 .cover {
   width: 90%;
   margin: 1em auto;
@@ -311,7 +312,7 @@ form input {
   width: 7em;
   height: 8em;
 }
-
+/* comments section */
 .comments-wrapper {
   display: flex;
   flex-direction: column;
@@ -363,7 +364,7 @@ form input {
   width: 2em;
   height: 2em;
 }
-
+/* here starts adaptive styles for phones, tablets, etc. values of min-width property are taken from table on w3schools */
 @media only screen and (min-width: 600px) {
   .book-picture {
     width: 55%;
