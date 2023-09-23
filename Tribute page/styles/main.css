@@ -1,3 +1,4 @@
+/*here removing all unnecessary default styles*/
 * {
   margin: 0px;
   padding: 0px;
@@ -9,7 +10,7 @@ body {
   /*font-family: 'Oswald', sans-serif;*/
 }
 
-/*top part*/
+/*header*/
 h1,
 h2,
 h3 {
@@ -30,7 +31,7 @@ header a {
 .icons_ .close {
   display: none;
 }
-
+/*nav-bar*/
 nav {
   top: 0px;
   background-color: black;
@@ -114,7 +115,7 @@ nav {
   font-size: 500px;
 }
 
-/*middle part (content part)*/
+/*main section (content part: bio, companies, galler)*/
 
 .headline {
   text-align: center;
@@ -313,7 +314,7 @@ nav {
   padding: 5px;
 }
 
-/*the last part*/
+/*footer with kinda my info*/
 footer {
   width: 100%;
   text-align: center;
