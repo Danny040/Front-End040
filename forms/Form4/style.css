@@ -27,7 +27,7 @@
   position: relative;
   overflow: hidden;
 }
-
+/* bubbles are behind the form*/
 .bubble {
   position: absolute;
   border-radius: 50%;
@@ -108,7 +108,8 @@ form {
   pointer-events: none;
   border-bottom: 1px solid rgb(20, 60, 97);
 }
-
+/* from here I start adding styles for input fields, so when you choose one it becomes pink and "placeholder"
+goes above the input field*/
 .label-name::after,
 .label-email::after,
 .label-password::after {
