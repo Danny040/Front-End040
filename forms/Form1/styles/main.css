@@ -4,7 +4,7 @@ body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
+/* picture section */
 .picture {
   width: 100%;
   display: flex;
@@ -15,7 +15,7 @@ body {
   width: 15em;
   height: 25em;
 }
-
+/* headline section */
 .healine-text {
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@ body {
   padding: 0em 5em;
   margin-bottom: 2em;
 }
-
+/* form section */
 .form_ {
   width: 65%;
   margin: auto;
@@ -47,7 +47,8 @@ form {
   flex-direction: column;
   justify-content: center;
   padding: 2em;
-}
+} 
+/* pseudo element to style the placeholder attribute */
 ::placeholder {
   font-family: "Poppins", sans-serif;
 }
@@ -97,7 +98,8 @@ textarea {
   color: black;
 }
 
-/*break points are 575(removed because nothing needed to be changed), 766, 990*/
+/* this section is for responsive styles
+break points are 575(removed because nothing needed to be changed), 766, 990*/
 @media only screen and (min-width: 766px) {
   .flower {
     width: 20em;
