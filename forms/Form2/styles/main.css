@@ -1,3 +1,4 @@
+/* removing default styles*/
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +18,7 @@ body {
 main {
   background-color: white;
 }
-
+/* contact info with social media links*/
 .text-wrapper {
   display: flex;
   justify-content: flex-start;
@@ -77,7 +78,7 @@ main {
   width: 30px;
   margin-right: 1.5em;
 }
-
+/* form styling*/
 form {
   display: flex;
   flex-direction: column;
@@ -104,7 +105,7 @@ form select {
   border-bottom: 0.11em solid black;
   font-size: 1.1rem;
 }
-
+/* using pseudo classes to change default styles */
 form input:focus,
 form textarea:focus,
 form select:focus {
@@ -131,7 +132,8 @@ form textarea {
   color: white;
 }
 
-/*break points 768, 1158*/
+/* styles for teblets, phones and etc
+break points 768, 1158*/
 @media only screen and (min-width: 768px) {
   main {
     display: flex;
@@ -192,7 +194,7 @@ form textarea {
     font-size: 1.2rem;
   }
 }
-
+/* for bigger pc screens */
 @media only screen and (min-width: 1158px) {
   form input,
   form textarea,
