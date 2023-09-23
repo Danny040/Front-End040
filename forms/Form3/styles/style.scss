@@ -1,6 +1,6 @@
-$secontColor: #cb6794;
+$secontColor: #cb6794; //variable
 
-@mixin buttons($txt-color, $bg-color) {
+@mixin buttons($txt-color, $bg-color) { // mixin is used to reuse block of styles
   cursor: pointer;
   color: $txt-color;
   font-weight: 500;
@@ -54,7 +54,7 @@ header {
     }
   }
 }
-
+// navigation bar
 nav {
   width: 60%;
   height: 10vh;
@@ -89,7 +89,7 @@ nav {
 }
 
 .login {
-  @include buttons($secontColor, white);
+  @include buttons($secontColor, white); // including mixin block 
   @include bt-hv();
 }
 
@@ -182,7 +182,7 @@ nav {
     }
   }
 }
-
+// styles for bigger screens
 @media only screen and (max-width: 1050px) {
   header {
     .Logo {
