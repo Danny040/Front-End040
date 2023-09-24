@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
+    <!--google icons-->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -19,6 +21,7 @@
   </head>
   <body>
     <div class="wrapper">
+      <!--table - card table-->
       <div class="table">
         <h1>BlackJack</h1>
         <div class="game-field game-field-off" id="game-field">
@@ -26,6 +29,7 @@
           <p id="dealer">Dealers cards:</p>
           <p id="player">Players cards:</p>
         </div>
+        <!--bets section-->
         <div class="bets-on bets-off" id="bets-btns">
           <button class="bet-btn five" id="five" onclick="betMoney(5)">
             5 &dollar;
@@ -44,6 +48,7 @@
             50 &dollar;
           </button>
         </div>
+        <!--game options-->
         <div class="start-section" id="start-section">
           <button class="start-game" id="start-game" onclick="startFunction()">
             Start
