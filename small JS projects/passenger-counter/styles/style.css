@@ -27,7 +27,7 @@ body {
 .counter-window-off {
   display: none;
 }
-
+/* wrappers - containers*/
 .wrapper {
   width: 400px;
   height: 80vh;
