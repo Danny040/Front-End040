@@ -9,7 +9,7 @@
 .hidden {
   display: none;
 }
-
+/* wrapper is a container for the whole screen kinda*/
 .wrapper {
   font-family: "Monsterrat", sans-serif;
   background: #000633;
@@ -40,7 +40,7 @@ header > h1 {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
-
+/* below styles for notes and note container*/
 main {
   width: 100%;
   height: 90vh;
@@ -55,7 +55,7 @@ main {
   justify-content: center;
   flex-wrap: wrap;
 }
-
+/* styles below are used to make cutstom styles for default scrollbar*/
 .notes::-webkit-scrollbar {
   width: 10px;
 }
@@ -71,7 +71,7 @@ main {
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.4);
 }
-
+/*notes again*/
 .note {
   width: 300px;
   height: 300px;
@@ -98,7 +98,7 @@ main {
   z-index: 10;
   animation: showup 0.5s ease-in-out forwards;
 }
-
+/*animation for the element(area) when one wants to create a note*/
 @keyframes showup {
   from {
     transform: scale(0.1);
@@ -214,7 +214,7 @@ main {
   color: #000633;
   margin-left: 30px;
 }
-
+/*back arrow*/
 .arrow-icon {
   cursor: pointer;
   font-weight: bold;
@@ -273,7 +273,7 @@ main {
 .save-btn:hover {
   background-color: #257cff;
 }
-
+/*add button or a button with plus sign*/
 .add-btn {
   width: 60px;
   height: 60px;
@@ -300,7 +300,7 @@ main {
 .add-btn:hover {
   background-color: #257cff;
 }
-
+/* styles below are for smaller screen*/
 @media only screen and (max-width: 768px) {
   header > h1 {
     font-size: 1.5rem;
