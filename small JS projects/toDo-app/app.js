@@ -1,3 +1,5 @@
+// status 1 and 0 are responsible for done and not done
+// on load it checks local storage
 window.onload = () => {
   try {
     taskData = JSON.parse(localStorage.getItem("tasks"));
@@ -5,9 +7,10 @@ window.onload = () => {
   } catch (err) {
     localStorage.setItem("tasks", "[]");
     console.log(err);
+    location.reload();
   }
 };
-
+// function below shows task in the list (on the page)
 function displayFunction(element) {
   const optionIs = element.value;
   if (optionIs == "Done") {
@@ -31,7 +34,7 @@ function displayFunction(element) {
     addCardsOnLoad();
   }
 }
-
+// on load it adds cards to the page from local storage
 function addCardsOnLoad() {
   idForTask = taskData.length;
   taskData.forEach((item, index) => {
@@ -65,7 +68,7 @@ function cardCreation(name, index, status) {
   }
   return cardElement;
 }
-
+// all necessary html elements
 const addBtn = document.getElementById("add-btn");
 const newTaskWindow = document.getElementById("new-task");
 const closeBtnOne = document.getElementById("close-btn1");
@@ -110,7 +113,7 @@ addBtn2.addEventListener("click", () => {
 closeBtnOne.addEventListener("click", () => {
   newTaskWindow.classList.add("hidden");
 });
-
+// marks a task as done
 function markFunction(element) {
   let task = element.parentElement.firstElementChild;
   task.classList.toggle("done-text");
@@ -127,14 +130,14 @@ function removeTask(element) {
   localStorage.setItem("tasks", JSON.stringify(taskData));
   changeTasksId(parent1.id);
 }
-
+// adds to local storage
 function addToLS(value) {
   const taskObject = { name: value, status: 0 };
   taskData.push(taskObject);
   const jsonData = JSON.stringify(taskData);
   localStorage.setItem("tasks", jsonData);
 }
-
+// below function changes id of a task for instance when previous task was removed
 function changeTasksId(id) {
   const taskCards = document.querySelectorAll(".card");
   taskCards.forEach((element) => {
@@ -144,7 +147,7 @@ function changeTasksId(id) {
   });
   idForTask -= 1;
 }
-
+// changes data in local storage
 function changeDataInLS(id) {
   let status = taskData[id]["status"];
   if (status) {
