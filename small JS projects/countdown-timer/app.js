@@ -1,13 +1,14 @@
+// gathering all necessary HTML elements
 const day_ = document.getElementById("day");
 const hour_ = document.getElementById("hour");
 const minute_ = document.getElementById("minute");
 const second_ = document.getElementById("second");
 const holiday = document.getElementById("holiday");
 
-const holidayDate = new Date("17 September 2022");
+const holidayDate = new Date("16 September 2023"); // seting Octoberfest date
 
 const timer = setInterval(timeFlowing, 1000);
-
+// bellow function calculates how many miliseconds till the holiday and then convets it to minuts, hours, and etc
 function timeFlowing() {
   const todayDate = new Date();
 
@@ -19,7 +20,7 @@ function timeFlowing() {
 
   showTime(seconds % 60, minutes % 60, hours % 24, days);
 }
-
+// bellow fucntion shows data from timeFlowing function
 function showTime(s, m, h, d) {
   if (s == 0 && m == 0 && h == 0 && d == 0) {
     alert(`Happy ${holiday.textContent}!!!`);
