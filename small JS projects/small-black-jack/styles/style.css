@@ -1,3 +1,4 @@
+/* off - turns off some elements; on - turns on some elements*/
 * {
   padding: 0;
   margin: 0;
@@ -16,7 +17,7 @@ body {
   align-items: center;
   background-color: black;
 }
-
+/*styling card table or game area*/
 .table {
   width: 450px;
   height: 80vh;
@@ -86,7 +87,7 @@ body {
 .bet-btn:hover {
   transform: scale(1.1);
 }
-
+/*bets start*/
 .five {
   background-color: red;
 }
@@ -102,6 +103,7 @@ body {
 .fifty {
   background-color: black;
 }
+/*bets end*/
 
 .start-section {
   display: flex;
@@ -132,7 +134,7 @@ body {
 .start-game:hover {
   animation: none;
 }
-
+/* start button animation*/
 @keyframes blinking {
   0% {
     transform: scale(1);
