@@ -6,6 +6,7 @@ window.onload = () => {
   } catch (err) {
     localStorage.setItem("notes", "[]");
     console.log(err);
+    location.reload();
   }
 };
 
@@ -26,7 +27,7 @@ function displayNotesOnLoad() {
 // used in two or more
 const popUpNote = document.getElementById("writing-area");
 
-// everything to create new note
+// all elements to create a new note
 const backArrow = document.getElementById("arrow-back");
 const notesElement = document.getElementById("notes-element");
 const noteHeadline = document.getElementById("headline");
@@ -40,7 +41,7 @@ const changeNoteArea = document.getElementById("create-note");
 addBtn.addEventListener("click", () => {
   addField();
 });
-
+// animation to show the field in which notes are created
 function addField() {
   changeNoteArea.classList.remove("hidden");
   popUpNote.animate(
@@ -52,7 +53,7 @@ function addField() {
 backArrow.addEventListener("click", () => {
   removeField();
 });
-
+// animation to hide the field in which notes are created
 function removeField() {
   popUpNote.animate(
     { transform: "translateY(200%)" },
@@ -98,7 +99,7 @@ function createNewNote(headline, content) {
   notesElement.appendChild(note);
   removeField();
 }
-
+// adds a new note to Local storage
 function addToLS(name, text) {
   const newNote = { headline: `${name}`, content: `${text}` };
   notesData.push(newNote);
@@ -114,7 +115,7 @@ function deleteNote(element) {
   localStorage.setItem("notes", JSON.stringify(notesData));
   changeId(eId);
 }
-
+// when a note is deleted from local storage other note's id changes
 function changeId(eId) {
   noteId -= 1;
   document.querySelectorAll(".note").forEach((element) => {
