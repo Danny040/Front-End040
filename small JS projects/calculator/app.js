@@ -5,19 +5,19 @@ class Calculator {
     this.result = 0;
     this.flag = true;
   }
-
+// removes all content from calculator's display
   clearAll() {
     this.currentNumber.textContent = "";
     this.previousNumber.textContent = "";
   }
-
+// removes only last number
   removeLastNumber() {
     this.currentNumber.textContent = this.currentNumber.textContent.slice(
       0,
       -1
     );
   }
-
+// basic math operations
   mathOperations(operation) {
     switch (operation) {
       case "+":
@@ -43,7 +43,7 @@ class Calculator {
         break;
     }
   }
-
+// when a button like + - etc are pressed it sends the symbol operation to the mathOperation method
   chooseOperation(operation) {
     let sign = this.previousNumber.textContent.substr(-2, 1);
     if (
@@ -70,7 +70,7 @@ class Calculator {
       );
     }
   }
-
+// updates display when a number or a dot are pressed
   updateDisplay(item) {
     if (this.flag) {
       if (item == "." && this.currentNumber.textContent.includes(".")) {
@@ -93,15 +93,15 @@ class Calculator {
     this.flag = false;
   }
 }
-
+// gathering all necessary elements
 const numbers = document.querySelectorAll("[data-number]");
 const operations = document.querySelectorAll("[data-operation]");
 const clearAll = document.querySelector("[data-clear-all]");
 const removeLastNumber = document.querySelector("[data-remove-last-number]");
 const equalSign = document.querySelector("[data-equal]");
 
-let calculator = new Calculator();
-
+let calculator = new Calculator(); // creating a new object
+// below are event listeners for buttons
 numbers.forEach((number) => {
   number.addEventListener("click", () => {
     calculator.updateDisplay(number.textContent);
