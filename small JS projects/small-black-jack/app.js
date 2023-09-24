@@ -1,3 +1,4 @@
+// gathering all necessary html elments
 const gameField = document.getElementById("game-field");
 const betsBtns = document.getElementById("bets-btns");
 const optionsBtns = document.getElementById("options-btns");
@@ -26,7 +27,7 @@ const cardDeck = new Map([
   ["A", 11],
 ]);
 
-const arr1 = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+const arr1 = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]; // card's values
 
 const minV = 0;
 const maxV = arr1.length;
@@ -35,9 +36,10 @@ let yourBank = 50;
 let bet = 0;
 let totalBet = 0;
 
-let dCardSum = 0;
-let pCardSum = 0;
+let dCardSum = 0; // dealers card sum
+let pCardSum = 0; // players card sum
 
+// showing and hiding html elements
 const startFunction = () => {
   startSection.classList.add("start-section-off");
   showCards.classList.add("show-cards-off");
@@ -56,7 +58,7 @@ const endFunction = () => {
   startSection.classList.remove("start-section-off");
   resetFunction();
 };
-
+// resets values and game in general
 const resetFunction = () => {
   yourBank = 50;
   bet = 0;
@@ -74,8 +76,8 @@ function getRandomCard() {
   return arr1[Math.floor(Math.random() * (maxV - minV))];
 }
 
-let dCard = [];
-let pCard = [];
+let dCard = []; // dealers cards
+let pCard = []; // players cards
 
 function cardDealer() {
   while (true) {
@@ -160,12 +162,12 @@ function changeBtns() {
   betsBtns.classList.add("bets-off");
   showCards.classList.remove("show-cards-off");
 }
-
+// players balance increases when won
 function addMoneyBank(yourBet) {
   yourBank += yourBet;
   bank.textContent = `Your bank: ${yourBank} $`;
 }
-
+// players balance decreases when bet is made
 function bankFunction(yourBet) {
   totalBet += yourBet;
   yourBank -= yourBet;
