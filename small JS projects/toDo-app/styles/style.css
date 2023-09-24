@@ -28,7 +28,7 @@ body {
 
   position: relative;
 }
-
+/*new task area starts*/
 .new-task {
   width: 100%;
   height: 100vh;
@@ -58,7 +58,7 @@ body {
   font-size: 1.3rem;
   padding: 10px;
 }
-
+/* add button - not search*/
 .search-btn {
   cursor: pointer;
   border: none;
@@ -80,6 +80,7 @@ body {
 .close-adding:hover {
   transform: scale(1.3);
 }
+/*new task area end*/
 
 header {
   padding: 30px 5px;
@@ -111,7 +112,7 @@ header {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
 }
-
+/*customization of select dropdown menu*/
 .select::after {
   position: absolute;
   cursor: pointer;
@@ -151,7 +152,7 @@ header {
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.3);
 }
-
+/*card with a task*/
 .card {
   background: white;
   color: rgb(158, 3, 253);
@@ -172,7 +173,7 @@ header {
 .card:hover .close {
   opacity: 1;
 }
-
+/* done or not done circle on a task card*/
 .circle {
   user-select: none;
   -webkit-user-select: none;
