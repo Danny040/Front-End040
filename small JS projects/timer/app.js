@@ -1,5 +1,6 @@
 let timeCounter;
 function getAllInfo() {
+  // necessary html elements
   const hours = document.getElementById("hours");
   const minutes = document.getElementById("minutes");
   const seconds = document.getElementById("seconds");
@@ -8,7 +9,7 @@ function getAllInfo() {
   const startBtn = document.getElementById("start");
   const stopBtn = document.getElementById("stop");
   const cancelBtn = document.getElementById("cancel");
-
+  // below are event listeners for the elements
   arrowUp.forEach((element, index) => {
     element.addEventListener("click", function () {
       const marker = 1;
@@ -45,7 +46,7 @@ function getAllInfo() {
     cancelFunction(times);
   });
 }
-
+// mr - marker; ar - index
 function checkArrow(mr, ar, h, m, s) {
   switch (ar) {
     case 0:
@@ -59,7 +60,7 @@ function checkArrow(mr, ar, h, m, s) {
       break;
   }
 }
-
+// mr - marker is necessary to return the counter to 0 after 23 or jump from 0 to 23 when arow dows is pressed
 function changeHours(h, mr) {
   hour = Number(h.textContent);
   if (mr > 0) {
@@ -76,7 +77,7 @@ function changeHours(h, mr) {
     }
   }
 }
-
+// changing minutes or seconds
 function changeMinutesSeconds(t, mr) {
   timePoints = Number(t.textContent);
   if (mr > 0) {
