@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,12 +26,8 @@
           <header>
             <div class="top">
               <h1>><spna class="headline">Password Generator</spna></h1>
-              <div class="switch-mode">
-                <span class="material-symbols-outlined sun"> light_mode </span>
-                <span class="material-symbols-outlined moon"> dark_mode </span>
-                <div class="circle" id="switch_"></div>
-              </div>
             </div>
+            <!--password field-->
             <div class="middle">
               <div class="pw-area">
                 <span class="password" id="password"></span>
@@ -40,15 +37,18 @@
               </div>
             </div>
           </header>
+          <!--password customization-->
           <main>
             <h2>Customize your password</h2>
             <div class="customize-wrapper">
               <div class="customization-area">
+                <!--uppercase option-->
                 <div class="option">
                   <input type="checkbox" id="uppercase" class="check-box" />
                   <span class="checkmark"></span>
                   <label for="uppercase">Uppercase letters</label>
                 </div>
+                <!--lowercase option-->
                 <div class="option">
                   <input
                     type="checkbox"
@@ -57,18 +57,21 @@
                   /><span class="checkmark"></span>
                   <label for="lowercase">Lowercase letters</label>
                 </div>
+                <!--numbers option-->
                 <div class="option">
                   <input type="checkbox" id="number" class="check-box" /><span
                     class="checkmark"
                   ></span>
                   <label for="number">Numbers</label>
                 </div>
+                <!--symbols option-->
                 <div class="option">
                   <input type="checkbox" id="symbol" class="check-box" /><span
                     class="checkmark"
                   ></span>
                   <label for="symbol">Symbols</label>
                 </div>
+                <!--password length min 8-->
                 <div class="pw-length">
                   <label for="password-length">Password length: </label>
                   <input
