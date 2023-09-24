@@ -1,3 +1,4 @@
+/*removing all unecessary default styles*/
 *,
 *::before,
 *::after {
@@ -5,7 +6,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+/*linear-gradient and -webkit-linear-gradient are the same thing used for different browsers*/
 .wrapper {
   width: 100%;
   height: 100vh;
