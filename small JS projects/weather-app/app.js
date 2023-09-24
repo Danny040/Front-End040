@@ -53,7 +53,7 @@ async function getWeatherForecast(lat, lon) {
   const jsObject = await resp.json();
   displayWeatherForecast(jsObject.daily);
 }
-
+// adds some animation
 function displayInfo(ct, mint, maxt, wd, icon) {
   if (window.innerWidth <= 768) {
     searchArea.animate(
