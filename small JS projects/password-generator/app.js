@@ -1,7 +1,9 @@
+// password options
 const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerLetters = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "0123456789";
 const symbols = "!@#$%^&*()_+=";
+// necessary html elements
 const passwordField = document.getElementById("password");
 const copyBtn = document.getElementById("copy-btn");
 const uppercaseBox = document.getElementById("uppercase");
@@ -74,7 +76,7 @@ function generatePassword() {
   }
   passwordField.textContent = password;
 }
-
+// if none boxes are checked, nothing will happen
 function checkOptions() {
   const arr = [];
   if (uppercaseBox.checked) {
