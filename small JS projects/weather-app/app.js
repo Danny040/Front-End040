@@ -3,7 +3,7 @@ const GEOLOCATION_API = "http://api.openweathermap.org/geo/1.0/direct?q=";
 const CURRENT_WEATHER_API = "https://api.openweathermap.org/data/2.5/weather?";
 const WEATHER_FORECAST_API = "https://api.openweathermap.org/data/2.5/onecall?";
 const limit = 1;
-let city = "";
+let city = "Marked Place";
 const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let geoPosition = {lat: 0, lng: 0};
 let map;
@@ -37,6 +37,27 @@ async function initMap(zoom = 2) {
         title: city,
       });
     }
+
+    google.maps.event.addListener(map, 'click', function(event) {
+      placeMarker(map, event.latLng);
+    });
+}
+
+
+
+function placeMarker(map, location) {
+  let marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+  let infowindow = new google.maps.InfoWindow({
+    content: 'Latitude: ' + location.lat() +
+    '<br>Longitude: ' + location.lng()
+  });
+  infowindow.open(map,marker);
+  geoPosition = {lat: location.lat(), lng: location.lng()};
+  getCurrentWeather(geoPosition.lat, geoPosition.lng);
+  getWeatherForecast(geoPosition.lat, geoPosition.lng);
 }
 
 initMap();
