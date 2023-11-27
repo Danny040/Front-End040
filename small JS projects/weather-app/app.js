@@ -36,6 +36,13 @@ async function initMap(zoom = 2) {
         position: geoPosition,
         title: city,
       });
+
+      let infowindow = new google.maps.InfoWindow({
+        content: 'Latitude: ' + geoPosition.lat +
+        '<br>Longitude: ' + geoPosition.lng
+      });
+
+      infowindow.open(map,marker);
     }
 
     google.maps.event.addListener(map, 'click', function(event) {
@@ -50,11 +57,7 @@ function placeMarker(map, location) {
     position: location,
     map: map
   });
-  let infowindow = new google.maps.InfoWindow({
-    content: 'Latitude: ' + location.lat() +
-    '<br>Longitude: ' + location.lng()
-  });
-  infowindow.open(map,marker);
+
   geoPosition = {lat: location.lat(), lng: location.lng()};
   getCurrentWeather(geoPosition.lat, geoPosition.lng);
   getWeatherForecast(geoPosition.lat, geoPosition.lng);
