@@ -5,6 +5,8 @@ const WEATHER_FORECAST_API = "https://api.openweathermap.org/data/2.5/onecall?";
 const limit = 1;
 let city = "";
 const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let geoPosition = {lat: 0, lng: 0};
+let map;
 
 const form = document.getElementById("search-form");
 const searchArea = document.getElementById("search-area");
@@ -18,6 +20,27 @@ form.addEventListener("submit", () => {
   getGeolocation(city);
 });
 
+async function initMap(zoom = 2) {
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+  
+    map = new Map(document.getElementById("map"), {
+        center: geoPosition,
+        zoom: zoom,
+        mapId: "id_1"
+    });
+
+    if (zoom > 2) {
+      const marker = new AdvancedMarkerElement({
+        map: map,
+        position: geoPosition,
+        title: city,
+      });
+    }
+}
+
+initMap();
+
 async function getGeolocation(city) {
   const resp = await fetch(
     GEOLOCATION_API + `${city}&limit=${limit}&appid=${API_KEY}`
@@ -26,6 +49,7 @@ async function getGeolocation(city) {
 
   let lat = jsObject[0].lat;
   let lon = jsObject[0].lon;
+  geoPosition = {lat: lat, lng: lon};
   getCurrentWeather(lat, lon);
   getWeatherForecast(lat, lon);
 }
@@ -55,18 +79,7 @@ async function getWeatherForecast(lat, lon) {
 }
 // adds some animation
 function displayInfo(ct, mint, maxt, wd, icon) {
-  if (window.innerWidth <= 768) {
-    searchArea.animate(
-      { left: "50%", top: "5%", transform: "translate(-50%, -5%)" },
-      { duration: 500, fill: "forwards" }
-    );
-  } else {
-    searchArea.animate(
-      { left: "50%", top: "10%", transform: "translate(-50%, -10%)" },
-      { duration: 500, fill: "forwards" }
-    );
-  }
-
+  initMap(6);
   const currentWeatherEl = document.getElementById("current-weather");
   currentWeatherEl.innerHTML = "";
   currentWeatherEl.innerHTML = `<h1 class="city">${city}</h1>
